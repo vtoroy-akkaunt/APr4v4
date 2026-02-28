@@ -4,11 +4,53 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:APr4v4"
+      xmlns:charts="clr-namespace:System.Windows.Forms.DataVisualization.Charting;assembly=System.Windows.Forms.DataVisualization"
       mc:Ignorable="d" 
       d:DesignHeight="400" d:DesignWidth="800"
       Title="_3">
 
-    <Grid>
-        
-    </Grid>
+<Grid>
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+        <StackPanel Orientation="Vertical">
+            <Image Height="50" Source="/Resources/Image2.png"/>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="a"></Label>
+                    <TextBox TextWrapping="Wrap" Width="120" x:Name="a_"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="b"></Label>
+                    <TextBox TextWrapping="Wrap" Width="120" x:Name="b_"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="x_0"></Label>
+                    <TextBox TextWrapping="Wrap" Width="120" x:Name="x_0_"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="x_k"></Label>
+                    <TextBox TextWrapping="Wrap" Width="120" x:Name="x_k_"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="dx"></Label>
+                    <TextBox TextWrapping="Wrap" Width="120" x:Name="dx_"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Результаты"></Label>
+                    <TextBox TextWrapping="Wrap" Width="120" x:Name="res_" IsReadOnly="True" MaxHeight="150"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="Вычислить" x:Name="to_calc" Click="to_calc_Click"/>
+                    <Button Content="Очистить" x:Name="to_clear" Click="to_clear_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+            <WindowsFormsHost Height="300" Width="400">
+                <charts:Chart x:Name="the_chart">
+                    <charts:Chart.Legends>
+                        <charts:Legend></charts:Legend>
+                    </charts:Chart.Legends>
+                </charts:Chart>
+            </WindowsFormsHost>
+        </StackPanel>
+</Grid>
 </Page>

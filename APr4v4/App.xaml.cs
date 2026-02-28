@@ -11,8 +11,8 @@ namespace APr4v4 {
     /// Interaction logic for App.xaml
     /// </summary>
     public partial class App : Application {
-        static public void show_invalid_input() {
-            MessageBox.Show("Неверный ввод.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+        static public void show_invalid_input(string text = null) {
+            MessageBox.Show(text == null ? "Неверный ввод." : text, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
 }
