@@ -9,6 +9,31 @@
       Title="_2">
 
     <Grid>
-        
+        <StackPanel Orientation="Vertical">
+            <Image Height="50" Source="/Resources/Image1.png"/>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="x"></Label>
+                    <TextBox TextWrapping="Wrap" Width="120" x:Name="x"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="y"></Label>
+                    <TextBox TextWrapping="Wrap" Width="120" x:Name="y"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <RadioButton GroupName="fx" Content="sh(x)" x:Name="fx_shx" IsChecked="True"></RadioButton>
+                    <RadioButton GroupName="fx" Content="x^2" x:Name="fx_x2"></RadioButton>
+                    <RadioButton GroupName="fx" Content="e^x" x:Name="fx_ex"></RadioButton>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Результат"></Label>
+                    <TextBox TextWrapping="Wrap" Width="120" IsReadOnly="True" x:Name="res"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="Вычислить" x:Name="to_calc" Click="to_calc_Click"/>
+                    <Button Content="Очистить" x:Name="to_clear" Click="to_clear_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>
