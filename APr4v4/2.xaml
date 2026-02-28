@@ -10,7 +10,7 @@
 
     <Grid>
         <StackPanel Orientation="Vertical">
-            <Image Height="50" Source="/Resources/Image1.png"/>
+            <Image Height="50" Source="/Resources/Image2.png"/>
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
                 <StackPanel Orientation="Horizontal">
                     <Label Content="x"></Label>
