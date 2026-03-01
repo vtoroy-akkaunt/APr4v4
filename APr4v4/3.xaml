@@ -12,39 +12,39 @@
 <Grid>
     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
         <StackPanel Orientation="Vertical">
-            <Image Height="50" Source="/Resources/Image3.png"/>
+            <Image Height="50" Source="/Resources/Image3.png" ToolTip="Формула"/>
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="a"></Label>
-                    <TextBox TextWrapping="Wrap" Width="120" x:Name="a_"/>
+                    <Label Content="a" ToolTip="Подпись к полю ввода"></Label>
+                    <TextBox TextWrapping="Wrap" Width="120" x:Name="a_" ToolTip="Поле ввода значения"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="b"></Label>
-                    <TextBox TextWrapping="Wrap" Width="120" x:Name="b_"/>
+                    <Label Content="b" ToolTip="Подпись к полю ввода"></Label>
+                    <TextBox TextWrapping="Wrap" Width="120" x:Name="b_" ToolTip="Поле ввода значения"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="x_0"></Label>
-                    <TextBox TextWrapping="Wrap" Width="120" x:Name="x_0_"/>
+                    <Label Content="x_0" ToolTip="Подпись к полю ввода"></Label>
+                    <TextBox TextWrapping="Wrap" Width="120" x:Name="x_0_" ToolTip="Поле ввода значения"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="x_k"></Label>
-                    <TextBox TextWrapping="Wrap" Width="120" x:Name="x_k_"/>
+                    <Label Content="x_k" ToolTip="Подпись к полю ввода"></Label>
+                    <TextBox TextWrapping="Wrap" Width="120" x:Name="x_k_" ToolTip="Поле ввода значения"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="dx"></Label>
-                    <TextBox TextWrapping="Wrap" Width="120" x:Name="dx_"/>
+                    <Label Content="dx" ToolTip="Подпись к полю ввода"></Label>
+                    <TextBox TextWrapping="Wrap" Width="120" x:Name="dx_" ToolTip="Поле ввода значения"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="Результаты"></Label>
-                    <TextBox TextWrapping="Wrap" Width="120" x:Name="res_" IsReadOnly="True" MaxHeight="150"/>
+                    <Label Content="Результаты" ToolTip="Подпись к полю вывода"></Label>
+                    <TextBox TextWrapping="Wrap" Width="120" x:Name="res_" IsReadOnly="True" MaxHeight="150" ToolTip="Поле вывода значения"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Button Content="Вычислить" x:Name="to_calc" Click="to_calc_Click"/>
-                    <Button Content="Очистить" x:Name="to_clear" Click="to_clear_Click"/>
+                    <Button Content="Вычислить" x:Name="to_calc" Click="to_calc_Click" ToolTip="Кнопка, по подписи на которой очевидно, что она делает"/>
+                    <Button Content="Очистить" x:Name="to_clear" Click="to_clear_Click" ToolTip="Кнопка, по подписи на которой очевидно, что она делает"/>
                 </StackPanel>
             </StackPanel>
         </StackPanel>
-            <WindowsFormsHost Height="300" Width="400">
+            <WindowsFormsHost Height="300" Width="400" ToolTip="График">
                 <charts:Chart x:Name="the_chart">
                     <charts:Chart.Legends>
                         <charts:Legend></charts:Legend>

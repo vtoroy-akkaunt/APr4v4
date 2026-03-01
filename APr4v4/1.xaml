@@ -10,27 +10,27 @@
 
     <Grid>
         <StackPanel Orientation="Vertical">
-            <Image Height="50" Source="/Resources/Image1.png"/>
+            <Image Height="50" Source="/Resources/Image1.png" ToolTip="График"/>
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="x"></Label>
-                    <TextBox TextWrapping="Wrap" Width="120" x:Name="x"/>
+                    <Label Content="x" ToolTip="Подпись к полю ввода"></Label>
+                    <TextBox TextWrapping="Wrap" Width="120" x:Name="x" ToolTip="Поле ввода значения"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="y"></Label>
-                    <TextBox TextWrapping="Wrap" Width="120" x:Name="y"/>
+                    <Label Content="y" ToolTip="Подпись к полю ввода"></Label>
+                    <TextBox TextWrapping="Wrap" Width="120" x:Name="y" ToolTip="Поле ввода значения"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="z"></Label>
-                    <TextBox TextWrapping="Wrap" Width="120" x:Name="z"/>
+                    <Label Content="z" ToolTip="Подпись к полю ввода"></Label>
+                    <TextBox TextWrapping="Wrap" Width="120" x:Name="z" ToolTip="Поле ввода значения"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="Результат"></Label>
-                    <TextBox TextWrapping="Wrap" Width="120" IsReadOnly="True" x:Name="res"/>
+                    <Label Content="Результат" ToolTip="Подпись к полю вывода"></Label>
+                    <TextBox TextWrapping="Wrap" Width="120" IsReadOnly="True" x:Name="res" ToolTip="Поле вывода значения"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Button Content="Вычислить" x:Name="to_calc" Click="to_calc_Click"/>
-                    <Button Content="Очистить" x:Name="to_clear" Click="to_clear_Click"/>
+                    <Button Content="Вычислить" x:Name="to_calc" Click="to_calc_Click" ToolTip="Кнопка, по подписи на которой очевидно, что она делает"/>
+                    <Button Content="Очистить" x:Name="to_clear" Click="to_clear_Click" ToolTip="Кнопка, по подписи на которой очевидно, что она делает"/>
                 </StackPanel>
             </StackPanel>
         </StackPanel>
