@@ -48,6 +48,11 @@ namespace APr4v4 {
                     App.show_invalid_input("dx должен быть больше 0");
                     return;
                 }
+                if (dx >= (x_k - x_0))
+                {
+                    App.show_invalid_input("dx должен быть меньше разницы x_k и x_0");
+                    return;
+                }
                 if ((x_k - x_0) / dx > 200 && !allow_moar) {
                     MessageBox.Show("Много точек получится. Нажмите \"Вычислить\" ещё раз, чтобы таки всё это дело нарисовать.");
                     allow_moar = true;
