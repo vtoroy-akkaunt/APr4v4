@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,10 @@ namespace APr4v4 {
         private List<Page> pages = new List<Page> { new _1(), new _2(), new _3() };
         public MainWindow() {
             InitializeComponent();
+        }
+        private void onclosing(object sender, CancelEventArgs e) {
+            if (MessageBox.Show("Закрыть приложение?", "Банальный вопрос", MessageBoxButton.YesNo) == MessageBoxResult.No)
+                e.Cancel = true;
         }
         private void open_page(int page_index) {
             // всё на проекте можно сделать лучше, но задачи такой не стояло
