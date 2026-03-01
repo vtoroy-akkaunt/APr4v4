@@ -54,9 +54,9 @@ namespace APr4v4 {
                     return;
                 }
                 for (double x = x_0; x < Convert.ToDouble(x_k_.Text); x += Convert.ToDouble(dx_.Text)) {
-                    string y = $"{(a * Math.Pow(x, 3) + Math.Pow(Math.Cos(Math.Pow(x, 3) - b), 2)):0.00}";
-                    currentSeries.Points.AddXY(x, y);
-                    res_.Text += $"{x} {y}\n";
+                    double y = a * Math.Pow(x, 3) + Math.Pow(Math.Cos(Math.Pow(x, 3) - b), 2);
+                    currentSeries.Points.AddXY(x, Math.Round(y, 2));
+                    res_.Text += $"{x} {y:0.00}\n";
                 }
                 allow_moar = false;
             } catch (Exception) {
