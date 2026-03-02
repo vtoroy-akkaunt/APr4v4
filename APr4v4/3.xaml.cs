@@ -58,6 +58,7 @@ namespace APr4v4 {
                     allow_moar = true;
                     return;
                 }
+                res_.Clear();
                 for (double x = x_0; x < Convert.ToDouble(x_k_.Text); x += Convert.ToDouble(dx_.Text)) {
                     double y = a * Math.Pow(x, 3) + Math.Pow(Math.Cos(Math.Pow(x, 3) - b), 2);
                     currentSeries.Points.AddXY(x, Math.Round(y, 2));
