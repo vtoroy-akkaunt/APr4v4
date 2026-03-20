@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace APr4v4
 {
-    internal class Formulas
+    public class Formulas
     {
         /// <summary>
         /// Считает по первой формуле
