@@ -60,7 +60,7 @@ namespace APr4v4 {
                 }
                 res_.Clear();
                 for (double x = x_0; x < Convert.ToDouble(x_k_.Text); x += Convert.ToDouble(dx_.Text)) {
-                    double y = a * Math.Pow(x, 3) + Math.Pow(Math.Cos(Math.Pow(x, 3) - b), 2);
+                    double y = Formulas.calc_3(a, b, x);
                     currentSeries.Points.AddXY(x, Math.Round(y, 2));
                     res_.Text += $"{x} {y:0.00}\n";
                 }

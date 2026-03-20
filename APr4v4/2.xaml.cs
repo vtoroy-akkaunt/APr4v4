@@ -23,19 +23,17 @@ namespace APr4v4 {
         }
 
         private void to_calc_Click(object sender, RoutedEventArgs e) {
-            Func<double, double> f = fx_shx.IsChecked.GetValueOrDefault()
-                ? new Func<double, double>(x => Math.Sinh(x))
-                : (fx_x2.IsChecked.GetValueOrDefault()
-                    ? new Func<double, double>(x => x * x)
-                    : new Func<double, double>(x => Math.Pow(Math.E, x))
-                );
-            try {
+            Formulas.Function2 f = fx_shx.IsChecked.GetValueOrDefault()
+            ? Formulas.Function2.sh_x
+            : (fx_x2.IsChecked.GetValueOrDefault()
+                ? Formulas.Function2.x2
+                : Formulas.Function2.ex
+            );
+            try
+            {
                 var x_ = Convert.ToDouble(x.Text);
                 var y_ = Convert.ToDouble(y.Text);
-                var w_ = x_ == y_ ? 0.5 + Math.Pow(y_ + f(x_), 3) : (
-                    Math.Atan(f(x_)) + Math.Pow(f(x_) - y_, 3) * (x_ > y_ ? 1 : -1) // очевидно
-                );
-                res.Text = w_.ToString();
+                res.Text = Formulas.calc_2(x_, y_, f).ToString();
             } catch (Exception) {
                 App.show_invalid_input();
             }
